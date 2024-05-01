@@ -18,6 +18,8 @@ function customeRender(reactElement, container) {
   container.appendChild(domElement);
 }
 
+
+//custome render methode Syntax
 const reactElement = {
   type: "a",
   props: {
@@ -30,3 +32,17 @@ const reactElement = {
 const mainContainer = document.querySelector("#root");
 
 customeRender(reactElement, mainContainer);
+
+// Basics Staps
+
+/* 
+1] Access HTML element :  #root element 
+
+2] then define react element's : we have use Obj reactElement
+
+3] then defind customeRender function for render the code : customeRender()
+
+4] then last in customeRender pass argument : customeRender(reactElement, mainContainer);
+
+5] reactElement render methode put in mainContainer
+*/

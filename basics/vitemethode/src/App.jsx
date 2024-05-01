@@ -1,4 +1,6 @@
-// npm run dev ===> It's command use to start/run program file
+// for install ==>  npm create vite@latest
+// start/run program file ==> npm run dev 
+
 import Test from "./test.jsx";
 
 function App() {
