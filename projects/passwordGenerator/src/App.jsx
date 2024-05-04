@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect,useRef } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
   const [length, setLength] = useState(6);
@@ -6,7 +6,7 @@ function App() {
   const [numberAllowed, setNumber] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false);
 
-  const passwordRef = useRef(null)
+  const passwordRef = useRef(null);
 
   const passwordGenerator = useCallback(() => {
     let pass = "";
@@ -26,15 +26,15 @@ function App() {
   }, [length, numberAllowed, charAllowed, setPassword]);
 
   const copyPassword = useCallback(() => {
-    passwordRef.current?.select()
-    // passwordRef.current?.setSelectionRange(0,3)      ==> we can define range 
-    window.navigator.clipboard.writeText(password)
-  },[password])
+    passwordRef.current?.select();
+    // passwordRef.current?.setSelectionRange(0,3)      ==> we can define range
+    window.navigator.clipboard.writeText(password);
+  }, [password]);
 
   useEffect(() => {
     passwordGenerator();
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
-
+  // if dependancy array's value change then useEffect call the function callgenrator
   return (
     <>
       <div className="bg-black h-screen text-white flex items-center flex-col">
@@ -49,7 +49,12 @@ function App() {
               readOnly
               ref={passwordRef}
             />
-            <button className="bg-orange-400 p-2 rounded-r-md m-1" onClick={copyPassword}>copy</button>
+            <button
+              className="bg-orange-400 p-2 rounded-r-md m-1"
+              onClick={copyPassword}
+            >
+              copy
+            </button>
           </div>
           <div className="flex items-center">
             <input
