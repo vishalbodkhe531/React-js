@@ -1,4 +1,5 @@
-import fetchData from "./Hooks/useFetch";
+import fetchData from "./hooks/useFatch"
+
 
 function App() {
 
@@ -9,13 +10,13 @@ function App() {
       <div className="text-center bg-black text-white font-serif text-xl">
         <h1>Welcome to Profile</h1>
       </div>
-      <div className="bg-black h-screen w-full text-white flex justify-center ">
+      <div className="bg-black h-screen w-full text-white flex justify-center">
         <div className="">
           <div className="flex justify-center">
             <img
               src={data[0].avatar_url}
               alt=""
-              className="h-[20rem] m-6 border-2 rounded-full shadow-white shadow-lg mt-10"
+              className="h-[20rem] m-6 border-2 rounded-full shadow-white shadow-lg"
             />
           </div>
           <div className="p-2 font-mono">
@@ -33,4 +34,3 @@ function App() {
 }
 
 export default App
-
