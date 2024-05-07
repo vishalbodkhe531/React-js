@@ -1,26 +1,27 @@
+
 // import { useEffect, useState } from "react";
-
-import { useEffect, useState } from "react";
-
-// const useHooks = ({string}) => {
+// const hooksData = ({ string }) => {
+  
 //   const [data, setData] = useState("");
 
 //   useEffect(() => {
-//     setData(string);
-//   }, []);
+//     setData(string)
+//   }, [])
+//   return [data,setData]
+// }
 
-//   return [data, setData];
-// };
+// export default hooksData;
 
-// export default useHooks;
-const hooksData = ({ string }) => {
-  
+import { useState, useEffect } from "react";
+
+const UserData = ({ content }) => {
   const [data, setData] = useState("");
 
-  useEffect(() => { 
-    setData(string)
-  }, [])
-  return [data,setData]
-}
+  useEffect(() => {
+    setData(content);
+  }, []);
 
-export default hooksData;
+  return [data,setData]
+};
+
+export default UserData;
