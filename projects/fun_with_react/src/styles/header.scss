@@ -1,0 +1,30 @@
+@import "color";
+
+
+nav {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $first;
+    top: 0%;
+    z-index: 10;
+
+    >h1{
+        text-transform: uppercase;
+    }
+
+    >main{
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        >a{
+            color: $dark;
+            margin: 1rem;
+
+            &:hover{
+                color: $third;
+            }
+        }
+    }
+}

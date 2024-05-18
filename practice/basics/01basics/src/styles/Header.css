@@ -1,0 +1,11 @@
+nav{
+  color: rgb(255, 255, 255);
+  height: 2rem;
+  display: flex;
+}
+
+nav > a{
+  margin-left: 5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
