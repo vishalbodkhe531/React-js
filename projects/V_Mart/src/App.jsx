@@ -1,12 +1,9 @@
 import React from "react";
-// import Cart from './components/Cart';
-// import { Products } from './data';
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import AddToCart from "./pages/ProductDetails";
-// import Home from './pages/Home';
+import AddCart from "./pages/AddCart";
 
 function App() {
   return (
@@ -15,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/product-detail" element={<AddToCart />} />
+        <Route path="/add-cart" element={<AddCart />} />
       </Routes>
     </Router>
   );
