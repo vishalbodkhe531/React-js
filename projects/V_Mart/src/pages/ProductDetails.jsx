@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import ProductInfo from "../components/ProductInfo";
+import { useSelector } from "react-redux";
 
 function ProductDetails() {
+  const { selectedCart } = useSelector((state) => state.Cart);
   return (
-    <div>ProductDetails</div>
-  )
+    <>
+      <ProductInfo selectedCartInfo={selectedCart} />
+    </>
+  );
 }
 
-export default ProductDetails
+export default ProductDetails;

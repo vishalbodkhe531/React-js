@@ -1,27 +1,28 @@
-import React, { useState } from 'react'
-import {Link} from "react-router-dom"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
-
-
   return (
-    <header className="bg-slate-200">
+    <header className="bg-slate-200 font-[cursive]">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to={"/"}>
-          <h1 className="font-bold">MERN Auth</h1>
+          <h1 className="font-bold">Shoping Cart</h1>
         </Link>
         <ul className="flex gap-4">
           <Link to={"/"}>
-            <li>Home</li>
+            <li className="hover:text-blue-600">Home</li>
           </Link>
           <Link to={"/about"}>
-            <li>About</li>
+            <li className="hover:text-blue-600">About</li>
           </Link>
           <Link to={"/signin"}>
-            <li>Sign in</li>
+            <li className="hover:text-blue-600">Sign in</li>
           </Link>
           <Link to={"/add-cart"}>
-            <li>Cart</li>
+            <li className="hover:text-blue-600">Cart</li>
+          </Link>
+          <Link to={"/like-cart"}>
+            <li className="hover:text-blue-600">Likes</li>
           </Link>
         </ul>
       </div>
@@ -29,4 +30,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;
